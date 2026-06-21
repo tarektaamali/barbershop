@@ -9,6 +9,8 @@ import '../../features/auth/presentation/signup_screen.dart';
 import '../../features/admin/presentation/admin_approvals_screen.dart';
 import '../../features/booking/presentation/booking_screen.dart';
 import '../../features/booking/presentation/my_reservations_screen.dart';
+import '../../features/discovery/presentation/favorites_screen.dart';
+import '../../features/discovery/presentation/salon_profile_screen.dart';
 import '../../features/home/presentation/customer_home_screen.dart';
 import '../../features/salon/presentation/salon_dashboard_screen.dart';
 import '../../features/salon/presentation/salon_registration_screen.dart';
@@ -73,6 +75,15 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/reservations',
         builder: (_, __) => const MyReservationsScreen(),
+      ),
+      GoRoute(
+        path: '/s/:salonId',
+        builder: (_, state) =>
+            SalonProfileScreen(salonId: state.pathParameters['salonId']!),
+      ),
+      GoRoute(
+        path: '/favorites',
+        builder: (_, __) => const FavoritesScreen(),
       ),
       GoRoute(
         path: '/salon/register',

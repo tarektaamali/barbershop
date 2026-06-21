@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../auth/data/auth_repository.dart';
-import '../../salon/presentation/browse_salons_screen.dart';
+import '../../discovery/presentation/feed_screen.dart';
 
 class CustomerHomeScreen extends ConsumerWidget {
   const CustomerHomeScreen({super.key});
@@ -14,8 +14,13 @@ class CustomerHomeScreen extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.browseSalonsTitle),
+        title: Text(l10n.feedTitle),
         actions: [
+          IconButton(
+            tooltip: l10n.favoritesTitle,
+            icon: const Icon(Icons.favorite_border),
+            onPressed: () => context.go('/favorites'),
+          ),
           IconButton(
             tooltip: l10n.myReservationsTitle,
             icon: const Icon(Icons.event_note),
@@ -33,7 +38,7 @@ class CustomerHomeScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: const BrowseSalonsScreen(),
+      body: const FeedScreen(),
     );
   }
 }
