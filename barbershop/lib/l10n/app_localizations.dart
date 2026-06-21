@@ -183,6 +183,114 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Administration'**
   String get adminHomeTitle;
+
+  /// No description provided for @registerSalonButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Inscrire mon salon'**
+  String get registerSalonButton;
+
+  /// No description provided for @salonRegistrationTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Inscription du salon'**
+  String get salonRegistrationTitle;
+
+  /// No description provided for @salonNameLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Nom du salon'**
+  String get salonNameLabel;
+
+  /// No description provided for @salonCityLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ville'**
+  String get salonCityLabel;
+
+  /// No description provided for @salonDescriptionLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Description'**
+  String get salonDescriptionLabel;
+
+  /// No description provided for @salonAddressLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Adresse'**
+  String get salonAddressLabel;
+
+  /// No description provided for @submitButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Envoyer'**
+  String get submitButton;
+
+  /// No description provided for @saveButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Enregistrer'**
+  String get saveButton;
+
+  /// No description provided for @showPricesLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Afficher les prix'**
+  String get showPricesLabel;
+
+  /// No description provided for @pendingApprovalTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'En attente de validation'**
+  String get pendingApprovalTitle;
+
+  /// No description provided for @pendingApprovalBody.
+  ///
+  /// In fr, this message translates to:
+  /// **'Votre salon est en cours de validation par l\'administrateur.'**
+  String get pendingApprovalBody;
+
+  /// No description provided for @rejectedTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Inscription refusée'**
+  String get rejectedTitle;
+
+  /// No description provided for @suspendedTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Salon suspendu'**
+  String get suspendedTitle;
+
+  /// No description provided for @salonProfileTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Profil du salon'**
+  String get salonProfileTitle;
+
+  /// No description provided for @adminApprovalsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Salons à valider'**
+  String get adminApprovalsTitle;
+
+  /// No description provided for @noPendingSalons.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun salon en attente'**
+  String get noPendingSalons;
+
+  /// No description provided for @approveButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Valider'**
+  String get approveButton;
+
+  /// No description provided for @rejectButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Refuser'**
+  String get rejectButton;
 }
 
 class _AppLocalizationsDelegate
