@@ -51,4 +51,15 @@ void main() {
           'p_show_prices': false,
         })).called(1);
   });
+
+  test('setCover calls set_salon_cover RPC', () async {
+    when(() => client.rpc('set_salon_cover', params: any(named: 'params')))
+        .thenAnswer((_) => FakeFilterBuilder<dynamic>(null));
+
+    await repo.setCover('https://example.com/c.jpg');
+
+    verify(() => client.rpc('set_salon_cover', params: {
+          'p_cover_url': 'https://example.com/c.jpg',
+        })).called(1);
+  });
 }

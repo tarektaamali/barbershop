@@ -61,6 +61,21 @@ class SalonRepository {
         .map((r) => Salon.fromMap(r as Map<String, dynamic>))
         .toList();
   }
+
+  Future<Salon?> fetchApprovedById(String id) async {
+    final row = await _client
+        .from('salons')
+        .select()
+        .eq('id', id)
+        .eq('status', 'approved')
+        .maybeSingle();
+    if (row == null) return null;
+    return Salon.fromMap(row);
+  }
+
+  Future<void> setCover(String url) async {
+    await _client.rpc('set_salon_cover', params: {'p_cover_url': url});
+  }
 }
 
 final salonRepositoryProvider = Provider<SalonRepository>((ref) {
@@ -75,7 +90,13 @@ final mySalonProvider = FutureProvider<Salon?>((ref) async {
   return ref.watch(salonRepositoryProvider).fetchMySalon(profile.id);
 });
 
-/// All approved salons, highest-rated first (the customer browse list).
+/// All approved salons, highest-rated first (the customer feed).
 final approvedSalonsProvider = FutureProvider<List<Salon>>((ref) async {
   return ref.watch(salonRepositoryProvider).fetchApproved();
+});
+
+/// A single approved salon by id (the salon profile screen).
+final approvedSalonByIdProvider =
+    FutureProvider.family<Salon?, String>((ref, id) async {
+  return ref.watch(salonRepositoryProvider).fetchApprovedById(id);
 });
