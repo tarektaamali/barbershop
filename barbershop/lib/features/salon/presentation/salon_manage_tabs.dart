@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../l10n/app_localizations.dart';
 import '../domain/salon.dart';
 import 'hours_tab.dart';
+import 'requests_tab.dart';
 import 'salon_profile_form.dart';
 import 'services_tab.dart';
 import 'staff_tab.dart';
@@ -16,7 +17,7 @@ class SalonManageTabs extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Column(
         children: [
           TabBar(
@@ -26,6 +27,7 @@ class SalonManageTabs extends StatelessWidget {
               Tab(text: l10n.tabServices),
               Tab(text: l10n.tabStaff),
               Tab(text: l10n.tabHours),
+              Tab(text: l10n.tabRequests),
             ],
           ),
           Expanded(
@@ -35,6 +37,7 @@ class SalonManageTabs extends StatelessWidget {
                 ServicesTab(salonId: salon.id),
                 StaffTab(salonId: salon.id),
                 HoursTab(salonId: salon.id),
+                RequestsTab(salonId: salon.id),
               ],
             ),
           ),

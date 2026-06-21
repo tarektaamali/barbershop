@@ -50,6 +50,17 @@ class SalonRepository {
       'p_show_prices': showPrices,
     });
   }
+
+  Future<List<Salon>> fetchApproved() async {
+    final rows = await _client
+        .from('salons')
+        .select()
+        .eq('status', 'approved')
+        .order('rating_avg', ascending: false);
+    return (rows as List)
+        .map((r) => Salon.fromMap(r as Map<String, dynamic>))
+        .toList();
+  }
 }
 
 final salonRepositoryProvider = Provider<SalonRepository>((ref) {
@@ -62,4 +73,9 @@ final mySalonProvider = FutureProvider<Salon?>((ref) async {
   final profile = await ref.watch(currentProfileProvider.future);
   if (profile == null) return null;
   return ref.watch(salonRepositoryProvider).fetchMySalon(profile.id);
+});
+
+/// All approved salons, highest-rated first (the customer browse list).
+final approvedSalonsProvider = FutureProvider<List<Salon>>((ref) async {
+  return ref.watch(salonRepositoryProvider).fetchApproved();
 });

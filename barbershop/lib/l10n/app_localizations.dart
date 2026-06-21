@@ -489,6 +489,156 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Dimanche'**
   String get daySun;
+
+  /// No description provided for @browseSalonsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Salons'**
+  String get browseSalonsTitle;
+
+  /// No description provided for @myReservationsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mes réservations'**
+  String get myReservationsTitle;
+
+  /// No description provided for @noSalons.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun salon disponible'**
+  String get noSalons;
+
+  /// No description provided for @noReservations.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune réservation'**
+  String get noReservations;
+
+  /// No description provided for @bookTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Réserver'**
+  String get bookTitle;
+
+  /// No description provided for @chooseServiceLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Service'**
+  String get chooseServiceLabel;
+
+  /// No description provided for @chooseStaffLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Coiffeur'**
+  String get chooseStaffLabel;
+
+  /// No description provided for @noPreference.
+  ///
+  /// In fr, this message translates to:
+  /// **'Sans préférence'**
+  String get noPreference;
+
+  /// No description provided for @chooseDateLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Date'**
+  String get chooseDateLabel;
+
+  /// No description provided for @chooseSlotLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Créneau'**
+  String get chooseSlotLabel;
+
+  /// No description provided for @noSlots.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun créneau disponible'**
+  String get noSlots;
+
+  /// No description provided for @requestSlotButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Demander ce créneau'**
+  String get requestSlotButton;
+
+  /// No description provided for @requestSentTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Demande envoyée'**
+  String get requestSentTitle;
+
+  /// No description provided for @requestSentBody.
+  ///
+  /// In fr, this message translates to:
+  /// **'En attente de confirmation du salon.'**
+  String get requestSentBody;
+
+  /// No description provided for @cancelButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Annuler'**
+  String get cancelButton;
+
+  /// No description provided for @tabRequests.
+  ///
+  /// In fr, this message translates to:
+  /// **'Demandes'**
+  String get tabRequests;
+
+  /// No description provided for @noRequests.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune demande'**
+  String get noRequests;
+
+  /// No description provided for @confirmButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Confirmer'**
+  String get confirmButton;
+
+  /// No description provided for @declineButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Refuser'**
+  String get declineButton;
+
+  /// No description provided for @statusPending.
+  ///
+  /// In fr, this message translates to:
+  /// **'En attente'**
+  String get statusPending;
+
+  /// No description provided for @statusConfirmed.
+  ///
+  /// In fr, this message translates to:
+  /// **'Confirmée'**
+  String get statusConfirmed;
+
+  /// No description provided for @statusDeclined.
+  ///
+  /// In fr, this message translates to:
+  /// **'Refusée'**
+  String get statusDeclined;
+
+  /// No description provided for @statusCancelled.
+  ///
+  /// In fr, this message translates to:
+  /// **'Annulée'**
+  String get statusCancelled;
+
+  /// No description provided for @statusCompleted.
+  ///
+  /// In fr, this message translates to:
+  /// **'Terminée'**
+  String get statusCompleted;
+
+  /// No description provided for @statusNoShow.
+  ///
+  /// In fr, this message translates to:
+  /// **'Absence'**
+  String get statusNoShow;
 }
 
 class _AppLocalizationsDelegate

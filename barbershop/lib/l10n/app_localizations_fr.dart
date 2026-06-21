@@ -206,4 +206,79 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get daySun => 'Dimanche';
+
+  @override
+  String get browseSalonsTitle => 'Salons';
+
+  @override
+  String get myReservationsTitle => 'Mes réservations';
+
+  @override
+  String get noSalons => 'Aucun salon disponible';
+
+  @override
+  String get noReservations => 'Aucune réservation';
+
+  @override
+  String get bookTitle => 'Réserver';
+
+  @override
+  String get chooseServiceLabel => 'Service';
+
+  @override
+  String get chooseStaffLabel => 'Coiffeur';
+
+  @override
+  String get noPreference => 'Sans préférence';
+
+  @override
+  String get chooseDateLabel => 'Date';
+
+  @override
+  String get chooseSlotLabel => 'Créneau';
+
+  @override
+  String get noSlots => 'Aucun créneau disponible';
+
+  @override
+  String get requestSlotButton => 'Demander ce créneau';
+
+  @override
+  String get requestSentTitle => 'Demande envoyée';
+
+  @override
+  String get requestSentBody => 'En attente de confirmation du salon.';
+
+  @override
+  String get cancelButton => 'Annuler';
+
+  @override
+  String get tabRequests => 'Demandes';
+
+  @override
+  String get noRequests => 'Aucune demande';
+
+  @override
+  String get confirmButton => 'Confirmer';
+
+  @override
+  String get declineButton => 'Refuser';
+
+  @override
+  String get statusPending => 'En attente';
+
+  @override
+  String get statusConfirmed => 'Confirmée';
+
+  @override
+  String get statusDeclined => 'Refusée';
+
+  @override
+  String get statusCancelled => 'Annulée';
+
+  @override
+  String get statusCompleted => 'Terminée';
+
+  @override
+  String get statusNoShow => 'Absence';
 }
