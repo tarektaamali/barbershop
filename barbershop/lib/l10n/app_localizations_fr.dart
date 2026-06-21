@@ -107,4 +107,58 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get rejectButton => 'Refuser';
+
+  @override
+  String get tabProfile => 'Profil';
+
+  @override
+  String get tabServices => 'Services';
+
+  @override
+  String get tabStaff => 'Équipe';
+
+  @override
+  String get addServiceTitle => 'Ajouter un service';
+
+  @override
+  String get editServiceTitle => 'Modifier le service';
+
+  @override
+  String get serviceNameLabel => 'Nom du service';
+
+  @override
+  String get serviceDurationLabel => 'Durée (min)';
+
+  @override
+  String get servicePriceLabel => 'Prix (DT)';
+
+  @override
+  String get addStaffTitle => 'Ajouter un coiffeur';
+
+  @override
+  String get editStaffTitle => 'Modifier le coiffeur';
+
+  @override
+  String get staffNameLabel => 'Nom';
+
+  @override
+  String get staffSpecialtyLabel => 'Spécialité';
+
+  @override
+  String get noServices => 'Aucun service';
+
+  @override
+  String get noStaff => 'Aucun coiffeur';
+
+  @override
+  String get addButton => 'Ajouter';
+
+  @override
+  String get deactivateButton => 'Désactiver';
+
+  @override
+  String get activateButton => 'Activer';
+
+  @override
+  String get minutesSuffix => 'min';
 }

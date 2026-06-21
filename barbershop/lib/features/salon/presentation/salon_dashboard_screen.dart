@@ -5,7 +5,7 @@ import '../../../l10n/app_localizations.dart';
 import '../../auth/data/auth_repository.dart';
 import '../data/salon_repository.dart';
 import '../domain/salon.dart';
-import 'salon_profile_form.dart';
+import 'salon_manage_tabs.dart';
 
 class SalonDashboardScreen extends ConsumerWidget {
   const SalonDashboardScreen({super.key});
@@ -35,7 +35,7 @@ class SalonDashboardScreen extends ConsumerWidget {
           }
           switch (salon.status) {
             case SalonStatus.approved:
-              return SalonProfileForm(salon: salon);
+              return SalonManageTabs(salon: salon);
             case SalonStatus.pending:
               return _Banner(
                 icon: Icons.hourglass_top,

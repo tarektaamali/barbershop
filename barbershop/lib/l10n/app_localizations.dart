@@ -291,6 +291,114 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Refuser'**
   String get rejectButton;
+
+  /// No description provided for @tabProfile.
+  ///
+  /// In fr, this message translates to:
+  /// **'Profil'**
+  String get tabProfile;
+
+  /// No description provided for @tabServices.
+  ///
+  /// In fr, this message translates to:
+  /// **'Services'**
+  String get tabServices;
+
+  /// No description provided for @tabStaff.
+  ///
+  /// In fr, this message translates to:
+  /// **'Équipe'**
+  String get tabStaff;
+
+  /// No description provided for @addServiceTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ajouter un service'**
+  String get addServiceTitle;
+
+  /// No description provided for @editServiceTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Modifier le service'**
+  String get editServiceTitle;
+
+  /// No description provided for @serviceNameLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Nom du service'**
+  String get serviceNameLabel;
+
+  /// No description provided for @serviceDurationLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Durée (min)'**
+  String get serviceDurationLabel;
+
+  /// No description provided for @servicePriceLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Prix (DT)'**
+  String get servicePriceLabel;
+
+  /// No description provided for @addStaffTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ajouter un coiffeur'**
+  String get addStaffTitle;
+
+  /// No description provided for @editStaffTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Modifier le coiffeur'**
+  String get editStaffTitle;
+
+  /// No description provided for @staffNameLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Nom'**
+  String get staffNameLabel;
+
+  /// No description provided for @staffSpecialtyLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Spécialité'**
+  String get staffSpecialtyLabel;
+
+  /// No description provided for @noServices.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun service'**
+  String get noServices;
+
+  /// No description provided for @noStaff.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun coiffeur'**
+  String get noStaff;
+
+  /// No description provided for @addButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ajouter'**
+  String get addButton;
+
+  /// No description provided for @deactivateButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Désactiver'**
+  String get deactivateButton;
+
+  /// No description provided for @activateButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Activer'**
+  String get activateButton;
+
+  /// No description provided for @minutesSuffix.
+  ///
+  /// In fr, this message translates to:
+  /// **'min'**
+  String get minutesSuffix;
 }
 
 class _AppLocalizationsDelegate
