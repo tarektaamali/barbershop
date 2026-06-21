@@ -90,5 +90,17 @@
   "statusDeclined": "Refusée",
   "statusCancelled": "Annulée",
   "statusCompleted": "Terminée",
-  "statusNoShow": "Absence"
+  "statusNoShow": "Absence",
+  "feedTitle": "Découvrir",
+  "favoritesTitle": "Favoris",
+  "searchHint": "Rechercher un salon ou une ville",
+  "bookButton": "Réserver",
+  "noFavorites": "Aucun favori",
+  "salonProfileServices": "Services",
+  "salonProfileStaff": "Équipe",
+  "coverUrlLabel": "Photo de couverture (URL)",
+  "reviewsCountLabel": "{count} avis",
+  "@reviewsCountLabel": {
+    "placeholders": { "count": { "type": "int" } }
+  }
 }

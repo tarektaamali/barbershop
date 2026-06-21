@@ -639,6 +639,60 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Absence'**
   String get statusNoShow;
+
+  /// No description provided for @feedTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Découvrir'**
+  String get feedTitle;
+
+  /// No description provided for @favoritesTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Favoris'**
+  String get favoritesTitle;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Rechercher un salon ou une ville'**
+  String get searchHint;
+
+  /// No description provided for @bookButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Réserver'**
+  String get bookButton;
+
+  /// No description provided for @noFavorites.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucun favori'**
+  String get noFavorites;
+
+  /// No description provided for @salonProfileServices.
+  ///
+  /// In fr, this message translates to:
+  /// **'Services'**
+  String get salonProfileServices;
+
+  /// No description provided for @salonProfileStaff.
+  ///
+  /// In fr, this message translates to:
+  /// **'Équipe'**
+  String get salonProfileStaff;
+
+  /// No description provided for @coverUrlLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Photo de couverture (URL)'**
+  String get coverUrlLabel;
+
+  /// No description provided for @reviewsCountLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'{count} avis'**
+  String reviewsCountLabel(int count);
 }
 
 class _AppLocalizationsDelegate

@@ -281,4 +281,33 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get statusNoShow => 'Absence';
+
+  @override
+  String get feedTitle => 'Découvrir';
+
+  @override
+  String get favoritesTitle => 'Favoris';
+
+  @override
+  String get searchHint => 'Rechercher un salon ou une ville';
+
+  @override
+  String get bookButton => 'Réserver';
+
+  @override
+  String get noFavorites => 'Aucun favori';
+
+  @override
+  String get salonProfileServices => 'Services';
+
+  @override
+  String get salonProfileStaff => 'Équipe';
+
+  @override
+  String get coverUrlLabel => 'Photo de couverture (URL)';
+
+  @override
+  String reviewsCountLabel(int count) {
+    return '$count avis';
+  }
 }
