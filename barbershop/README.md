@@ -87,3 +87,14 @@ wired — it only needs these credentials to complete the redirect.
   `update_my_salon`, `set_salon_status`); the table has no write policy, so owners
   cannot self-approve. Reads are RLS-gated: approved salons are public; pending
   salons are visible only to their owner and admins.
+
+## Salon content management (Plan 3)
+
+- The approved-salon dashboard is a tabbed view: **Profil** (the salon profile
+  form), **Services**, and **Équipe** (staff).
+- **Services** — add/edit (name, duration, price) and activate/deactivate.
+- **Équipe** — add/edit staff (name, specialty) and activate/deactivate.
+- Public can read the services and staff of approved salons. All writes go through
+  owner-scoped `SECURITY DEFINER` RPCs (`add_service`/`update_service`/
+  `set_service_active`, `add_staff`/`update_staff`/`set_staff_active`), guarded by
+  `owns_salon()` — an owner can only mutate their own salon's content.
