@@ -72,3 +72,18 @@ wired — it only needs these credentials to complete the redirect.
 3. Tap logout -> back to `/login`. Sign back in -> `/home`.
 4. To test role routing, set a profile's role to `admin` in the DB and reload;
    you should land on `/admin`.
+
+## Salon onboarding & approval (Plan 2)
+
+- A logged-in customer taps **Inscrire mon salon** (`/salon/register`), submits the
+  form, and `register_salon` creates a `pending` salon and elevates them to
+  `salon_owner` — the app then routes them to the salon dashboard.
+- While `pending`/`rejected`/`suspended`, the dashboard shows a status banner.
+  Once an admin approves it, the dashboard shows the editable salon profile
+  (name, city, description, address, and the **Afficher les prix** toggle).
+- An `admin` lands on the approvals screen, listing pending salons with
+  **Valider** / **Refuser**.
+- All salon writes go through `SECURITY DEFINER` RPCs (`register_salon`,
+  `update_my_salon`, `set_salon_status`); the table has no write policy, so owners
+  cannot self-approve. Reads are RLS-gated: approved salons are public; pending
+  salons are visible only to their owner and admins.
