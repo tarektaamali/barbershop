@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../auth/data/auth_repository.dart';
@@ -21,7 +22,12 @@ class CustomerHomeScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: Center(child: Text(l10n.customerHomeTitle)),
+      body: Center(
+        child: FilledButton.tonal(
+          onPressed: () => context.go('/salon/register'),
+          child: Text(l10n.registerSalonButton),
+        ),
+      ),
     );
   }
 }

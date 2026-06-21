@@ -52,4 +52,59 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get adminHomeTitle => 'Administration';
+
+  @override
+  String get registerSalonButton => 'Inscrire mon salon';
+
+  @override
+  String get salonRegistrationTitle => 'Inscription du salon';
+
+  @override
+  String get salonNameLabel => 'Nom du salon';
+
+  @override
+  String get salonCityLabel => 'Ville';
+
+  @override
+  String get salonDescriptionLabel => 'Description';
+
+  @override
+  String get salonAddressLabel => 'Adresse';
+
+  @override
+  String get submitButton => 'Envoyer';
+
+  @override
+  String get saveButton => 'Enregistrer';
+
+  @override
+  String get showPricesLabel => 'Afficher les prix';
+
+  @override
+  String get pendingApprovalTitle => 'En attente de validation';
+
+  @override
+  String get pendingApprovalBody =>
+      'Votre salon est en cours de validation par l\'administrateur.';
+
+  @override
+  String get rejectedTitle => 'Inscription refusée';
+
+  @override
+  String get suspendedTitle => 'Salon suspendu';
+
+  @override
+  String get salonProfileTitle => 'Profil du salon';
+
+  @override
+  String get adminApprovalsTitle => 'Salons à valider';
+
+  @override
+  String get noPendingSalons => 'Aucun salon en attente';
+
+  @override
+  String get approveButton => 'Valider';
+
+  @override
+  String get rejectButton => 'Refuser';
 }

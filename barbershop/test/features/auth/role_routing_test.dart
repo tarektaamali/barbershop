@@ -72,5 +72,16 @@ void main() {
         isNull,
       );
     });
+
+    test('customer is not redirected away from /salon/register', () {
+      expect(
+        resolveRedirect(
+          isLoggedIn: true,
+          role: UserRole.customer,
+          location: '/salon/register',
+        ),
+        isNull,
+      );
+    });
   });
 }

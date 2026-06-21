@@ -6,9 +6,10 @@ import '../../features/auth/data/auth_repository.dart';
 import '../../features/auth/domain/app_user.dart';
 import '../../features/auth/presentation/login_screen.dart';
 import '../../features/auth/presentation/signup_screen.dart';
-import '../../features/home/presentation/admin_home_screen.dart';
+import '../../features/admin/presentation/admin_approvals_screen.dart';
 import '../../features/home/presentation/customer_home_screen.dart';
-import '../../features/home/presentation/salon_home_screen.dart';
+import '../../features/salon/presentation/salon_dashboard_screen.dart';
+import '../../features/salon/presentation/salon_registration_screen.dart';
 
 const _publicRoutes = {'/login', '/signup'};
 
@@ -62,8 +63,12 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/login', builder: (_, __) => const LoginScreen()),
       GoRoute(path: '/signup', builder: (_, __) => const SignupScreen()),
       GoRoute(path: '/home', builder: (_, __) => const CustomerHomeScreen()),
-      GoRoute(path: '/salon', builder: (_, __) => const SalonHomeScreen()),
-      GoRoute(path: '/admin', builder: (_, __) => const AdminHomeScreen()),
+      GoRoute(
+        path: '/salon/register',
+        builder: (_, __) => const SalonRegistrationScreen(),
+      ),
+      GoRoute(path: '/salon', builder: (_, __) => const SalonDashboardScreen()),
+      GoRoute(path: '/admin', builder: (_, __) => const AdminApprovalsScreen()),
     ],
   );
 });
