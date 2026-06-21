@@ -128,5 +128,19 @@ wired — it only needs these credentials to complete the redirect.
 - The customer sees their bookings in **Mes réservations** and can **Annuler** a
   pending/confirmed one.
 - All transitions go through owner-only (`confirm`/`decline`) or customer-only
-  (`request`/`cancel`) `SECURITY DEFINER` RPCs. (Notifications and the visual
-  story feed that replaces the plain browse list come in later plans.)
+  (`request`/`cancel`) `SECURITY DEFINER` RPCs. (Notifications come in a later
+  plan.)
+
+## Discovery feed (Plan 6)
+
+- The customer home is now a full-screen, vertically-swipeable **story-style
+  feed** of approved salons (cover image or gradient, name/city/rating overlay,
+  ♥ favorite, **Réserver**), with a search field filtering by name/city.
+- Tapping a card opens the **salon profile** (cover header, services with prices
+  if `show_prices`, staff, rating) with a **Réserver** button → the booking flow.
+- Customers **favorite** salons (♥ on the feed/profile) and see them in
+  **Favoris**; `toggle_favorite` is idempotent (toggles on/off).
+- Owners set a **cover image URL** on their salon profile form (`set_salon_cover`);
+  the feed and profile render it with a gradient fallback.
+- Image uploads via Supabase Storage (and multi-photo galleries/stories) are a
+  later refinement — this version uses a single owner-provided cover URL.

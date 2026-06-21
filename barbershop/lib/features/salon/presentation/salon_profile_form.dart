@@ -23,6 +23,8 @@ class _SalonProfileFormState extends ConsumerState<SalonProfileForm> {
       TextEditingController(text: widget.salon.city);
   late final TextEditingController _address =
       TextEditingController(text: widget.salon.address ?? '');
+  late final TextEditingController _cover =
+      TextEditingController(text: widget.salon.coverUrl ?? '');
   late bool _showPrices = widget.salon.showPrices;
   bool _saving = false;
 
@@ -32,6 +34,7 @@ class _SalonProfileFormState extends ConsumerState<SalonProfileForm> {
     _description.dispose();
     _city.dispose();
     _address.dispose();
+    _cover.dispose();
     super.dispose();
   }
 
@@ -47,6 +50,7 @@ class _SalonProfileFormState extends ConsumerState<SalonProfileForm> {
             address: _address.text.trim().isEmpty ? null : _address.text.trim(),
             showPrices: _showPrices,
           );
+      await ref.read(salonRepositoryProvider).setCover(_cover.text.trim());
       ref.invalidate(mySalonProvider);
     } finally {
       if (mounted) setState(() => _saving = false);
@@ -73,6 +77,12 @@ class _SalonProfileFormState extends ConsumerState<SalonProfileForm> {
         TextField(
           controller: _description,
           decoration: InputDecoration(labelText: l10n.salonDescriptionLabel),
+        ),
+        const SizedBox(height: 12),
+        TextField(
+          key: const Key('coverUrl'),
+          controller: _cover,
+          decoration: InputDecoration(labelText: l10n.coverUrlLabel),
         ),
         const SizedBox(height: 12),
         TextField(
