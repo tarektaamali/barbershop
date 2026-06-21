@@ -1,0 +1,18 @@
+{
+  "@@locale": "fr",
+  "appTitle": "Barbershop",
+  "loginTitle": "Connexion",
+  "signupTitle": "Créer un compte",
+  "emailLabel": "E-mail",
+  "passwordLabel": "Mot de passe",
+  "fullNameLabel": "Nom complet",
+  "signInButton": "Se connecter",
+  "signUpButton": "S'inscrire",
+  "googleButton": "Continuer avec Google",
+  "signOutButton": "Se déconnecter",
+  "noAccountPrompt": "Pas de compte ? Inscrivez-vous",
+  "haveAccountPrompt": "Déjà un compte ? Connectez-vous",
+  "customerHomeTitle": "Accueil",
+  "salonHomeTitle": "Mon salon",
+  "adminHomeTitle": "Administration"
+}
