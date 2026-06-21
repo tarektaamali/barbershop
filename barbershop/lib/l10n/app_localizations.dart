@@ -399,6 +399,96 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'min'**
   String get minutesSuffix;
+
+  /// No description provided for @tabHours.
+  ///
+  /// In fr, this message translates to:
+  /// **'Horaires'**
+  String get tabHours;
+
+  /// No description provided for @selectStaffLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Coiffeur'**
+  String get selectStaffLabel;
+
+  /// No description provided for @noStaffForHours.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ajoutez d\'abord un coiffeur'**
+  String get noStaffForHours;
+
+  /// No description provided for @addRangeTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Ajouter une plage'**
+  String get addRangeTitle;
+
+  /// No description provided for @startTimeLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Début'**
+  String get startTimeLabel;
+
+  /// No description provided for @endTimeLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'Fin'**
+  String get endTimeLabel;
+
+  /// No description provided for @noHours.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune plage horaire'**
+  String get noHours;
+
+  /// No description provided for @removeButton.
+  ///
+  /// In fr, this message translates to:
+  /// **'Supprimer'**
+  String get removeButton;
+
+  /// No description provided for @dayMon.
+  ///
+  /// In fr, this message translates to:
+  /// **'Lundi'**
+  String get dayMon;
+
+  /// No description provided for @dayTue.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mardi'**
+  String get dayTue;
+
+  /// No description provided for @dayWed.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mercredi'**
+  String get dayWed;
+
+  /// No description provided for @dayThu.
+  ///
+  /// In fr, this message translates to:
+  /// **'Jeudi'**
+  String get dayThu;
+
+  /// No description provided for @dayFri.
+  ///
+  /// In fr, this message translates to:
+  /// **'Vendredi'**
+  String get dayFri;
+
+  /// No description provided for @daySat.
+  ///
+  /// In fr, this message translates to:
+  /// **'Samedi'**
+  String get daySat;
+
+  /// No description provided for @daySun.
+  ///
+  /// In fr, this message translates to:
+  /// **'Dimanche'**
+  String get daySun;
 }
 
 class _AppLocalizationsDelegate
