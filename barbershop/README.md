@@ -112,3 +112,21 @@ wired — it only needs these credentials to complete the redirect.
 - The `bookings` table + a GiST **overlap exclusion constraint** (no two
   confirmed/completed bookings overlap for the same staff) ship here so the slot
   function is correct; booking *write RPCs and the booking UI* arrive in Plan 5.
+
+## Booking engine — request → confirm (Plan 5)
+
+- A customer browses approved salons from the home screen, opens a salon, and
+  picks a **service**, optional **coiffeur** (default "Sans préférence"), a
+  **date**, and an open **slot**, then taps **Demander ce créneau**.
+- `request_booking` creates a `pending` booking and **soft-holds the slot for 15
+  minutes** (`hold_expires_at`), auto-assigning the chosen staff or the first
+  free one — so the slot disappears from `available_slots` for everyone else
+  while the request is pending.
+- The owner sees pending requests in the **Demandes** tab and **Confirme** or
+  **Refuse** them; confirming is guarded by the overlap exclusion constraint
+  (a conflicting confirmation fails with `23P01`).
+- The customer sees their bookings in **Mes réservations** and can **Annuler** a
+  pending/confirmed one.
+- All transitions go through owner-only (`confirm`/`decline`) or customer-only
+  (`request`/`cancel`) `SECURITY DEFINER` RPCs. (Notifications and the visual
+  story feed that replaces the plain browse list come in later plans.)
