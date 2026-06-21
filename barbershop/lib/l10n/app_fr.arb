@@ -50,5 +50,20 @@
   "addButton": "Ajouter",
   "deactivateButton": "Désactiver",
   "activateButton": "Activer",
-  "minutesSuffix": "min"
+  "minutesSuffix": "min",
+  "tabHours": "Horaires",
+  "selectStaffLabel": "Coiffeur",
+  "noStaffForHours": "Ajoutez d'abord un coiffeur",
+  "addRangeTitle": "Ajouter une plage",
+  "startTimeLabel": "Début",
+  "endTimeLabel": "Fin",
+  "noHours": "Aucune plage horaire",
+  "removeButton": "Supprimer",
+  "dayMon": "Lundi",
+  "dayTue": "Mardi",
+  "dayWed": "Mercredi",
+  "dayThu": "Jeudi",
+  "dayFri": "Vendredi",
+  "daySat": "Samedi",
+  "daySun": "Dimanche"
 }

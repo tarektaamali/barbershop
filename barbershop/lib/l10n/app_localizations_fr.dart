@@ -161,4 +161,49 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get minutesSuffix => 'min';
+
+  @override
+  String get tabHours => 'Horaires';
+
+  @override
+  String get selectStaffLabel => 'Coiffeur';
+
+  @override
+  String get noStaffForHours => 'Ajoutez d\'abord un coiffeur';
+
+  @override
+  String get addRangeTitle => 'Ajouter une plage';
+
+  @override
+  String get startTimeLabel => 'Début';
+
+  @override
+  String get endTimeLabel => 'Fin';
+
+  @override
+  String get noHours => 'Aucune plage horaire';
+
+  @override
+  String get removeButton => 'Supprimer';
+
+  @override
+  String get dayMon => 'Lundi';
+
+  @override
+  String get dayTue => 'Mardi';
+
+  @override
+  String get dayWed => 'Mercredi';
+
+  @override
+  String get dayThu => 'Jeudi';
+
+  @override
+  String get dayFri => 'Vendredi';
+
+  @override
+  String get daySat => 'Samedi';
+
+  @override
+  String get daySun => 'Dimanche';
 }

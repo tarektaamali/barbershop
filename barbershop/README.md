@@ -98,3 +98,17 @@ wired — it only needs these credentials to complete the redirect.
   owner-scoped `SECURITY DEFINER` RPCs (`add_service`/`update_service`/
   `set_service_active`, `add_staff`/`update_staff`/`set_staff_active`), guarded by
   `owns_salon()` — an owner can only mutate their own salon's content.
+
+## Working hours & availability (Plan 4)
+
+- The salon dashboard gains an **Horaires** tab: pick a coiffeur, then add/remove
+  weekly time ranges per day (multiple ranges per day support breaks). Hours are
+  stored as `working_hours` rows (`weekday` is Postgres `dow`: 0=Sunday..6=Saturday).
+- `available_slots(salon, service, date, staff?, slot_minutes)` is a server-side
+  SQL function that returns the bookable start times for a service on a date —
+  generated from each staff member's working hours, minus confirmed/completed
+  bookings and unexpired pending holds. With `staff` null it returns the union
+  across all active staff ("sans préférence").
+- The `bookings` table + a GiST **overlap exclusion constraint** (no two
+  confirmed/completed bookings overlap for the same staff) ship here so the slot
+  function is correct; booking *write RPCs and the booking UI* arrive in Plan 5.
